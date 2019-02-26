@@ -222,6 +222,10 @@ button {
   bottom: 0;
 }
 
+.relative {
+  position: relative;
+}
+
 .page-title, .section-title {
   color: #a6a6a6;
   font-size: 16px;
@@ -230,6 +234,128 @@ button {
 
 .page-title {
   text-transform: uppercase;
+}
+
+.btn {
+  font-weight: 300;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  padding: 13px 22px;
+  line-height: 1;
+  color: #fff;
+  font-size: 18px;
+}
+
+.btn.btn-default {
+  background-color: #979797;
+}
+
+.btn.btn-default:hover {
+  background-color: #bababa;
+}
+
+.btn.btn-orange {
+  background-color: #f58220;
+}
+
+.btn.btn-orange:hover {
+  background-color: #ffa200;
+}
+
+.btn[disabled] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e3e3e3;
+  cursor: not-allowed;
+}
+
+.btn[disabled] i {
+  margin-right: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn[disabled]:hover {
+  background-color: #e3e3e3;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 15px;
+}
+
+.input-group .input-form {
+  padding: 13px;
+  font-size: 14px;
+  line-height: 1;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  border: 2px solid #e3e3e3;
+  color: #333333;
+  cursor: pointer;
+}
+
+.input-group .input-form[type="password"] {
+  padding-left: 44px;
+}
+
+.input-group .input-form.text-area {
+  min-height: 100px;
+  font-size: 12px;
+}
+
+.input-group .input-form[disabled] {
+  border-color: #e3e3e3;
+  color: #a6a6a6;
+  background-color: #fff;
+}
+
+.input-group .input-form[disabled]:hover {
+  border-color: #e3e3e3;
+  color: #a6a6a6;
+}
+
+.input-group .input-form:hover {
+  border-color: #b1b1b1;
+}
+
+.input-group .input-form:focus {
+  border-color: #b1b1b1;
+  outline: none;
+}
+
+.notification-status {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+}
+
+.notification-status.status-orange {
+  background-color: #f58220;
+}
+
+.notification-status.status-green {
+  background-color: #04ae00;
 }
 
 #header {
@@ -244,14 +370,30 @@ button {
   font-weight: 400;
   font-size: 20px;
   color: #979797;
+  cursor: pointer;
 }
 
 #header .user-control span {
   margin: 0 20px 0 15px;
 }
 
+#header .user-control .icon-notification .notification-status {
+  top: -5px;
+  left: -5px;
+}
+
+#header .user-control .user-name {
+  color: #56819f;
+  font-size: 13px;
+}
+
 #header .user-control .icon-arrow-down {
   font-size: 12px;
+  margin-bottom: -3px;
+}
+
+#header .user-control:hover {
+  background-color: #f5f5f2;
 }
 
 #aside .aside-menu ul li.active a, #aside .aside-menu ul li a:hover {
@@ -287,19 +429,60 @@ button {
   margin-top: 5px;
 }
 
+#aside .aside-menu {
+  padding-bottom: 26px;
+}
+
 #aside .aside-menu ul li {
   color: #979797;
 }
 
 #aside .aside-menu ul li a {
-  display: block;
   padding: 14px;
   border-left: 4px solid transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #aside .aside-menu ul li a [class*='icon-'] {
   font-size: 17px;
   margin-right: 15px;
+}
+
+#aside .your-manager {
+  padding: 26px 18px;
+  border-top: 2px solid #333333;
+}
+
+#aside .your-manager .manager-title {
+  font-weight: 500;
+  color: #808080;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+#aside .your-manager .manager-info .manager-img {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  margin-right: 10px;
+}
+
+#aside .your-manager .manager-info .manager-img .notification-status {
+  height: 11px;
+  width: 11px;
+  top: 0;
+  right: 0;
+}
+
+#aside .your-manager .manager-info .manager-name {
+  color: #56819f;
 }
 
 .content-wrapper {

@@ -12,6 +12,117 @@
     @extend %title;
 }
 
+// buttons
+.btn {
+    font-weight: $fontLight;
+    border-radius: 2px;
+    padding: 13px 22px;
+    line-height: $lineHeight;
+    color: $btnFontColor;
+    font-size: 18px;
+
+    &.btn-default {
+        background-color: $btnDefaultBg;
+
+        &:hover {
+            background-color: $btnDefaultHoverBg;
+        }
+    }
+
+    &.btn-orange {
+        background-color: $btnOrangeBg;
+
+        &:hover {
+            background-color: $btnOrangeHoverBg;
+        }
+    }
+
+    &[disabled] {
+        display: flex;
+        align-items: center;
+        background-color: $btnDisabledBg;
+        cursor: not-allowed;
+
+        i {
+            margin-right: 16px;
+            display: flex;
+        }
+
+        &:hover {
+            background-color: $btnDisabledBg;
+        }
+    }
+}
+
+// INPUTS
+.input-group {
+    position: relative;
+
+    i {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 15px;
+    }
+
+    .input-form {
+        padding: 13px;
+        font-size: 14px;
+        line-height: $lineHeight;
+        border-radius: 4px;
+        border: 2px solid $inputBorderColor;
+        color: $inputColor;
+        cursor: pointer;
+
+        &[type="password"] {
+            padding-left: 44px;
+
+        }
+
+        &.text-area {
+            min-height: 100px;
+            font-size: 12px;
+        }
+
+        &[disabled] {
+            border-color: $inputDisabledBorderColor;
+            color: $inputDisabledFontColor;
+            background-color: #fff;
+
+            &:hover {
+                border-color: $inputDisabledBorderColor;
+                color: $inputDisabledFontColor;
+            }
+        }
+
+        &:hover {
+            border-color: $inputBorderColorHover;
+        }
+
+        &:focus {
+            border-color: $inputBorderColorHover;
+            outline: none;
+        }
+    }
+}
+
+// decoration components
+.notification-status {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    position: absolute;
+    
+    &.status-orange {
+        background-color: #f58220;
+    }
+    &.status-green {
+        background-color: #04ae00;
+    }
+}
+
 // header
 #header {
     width: 100%;
@@ -24,13 +135,32 @@
         font-weight: $fontRegular;
         font-size: 20px;
         color: $darkGrey;
+        cursor: pointer;
 
         span {
             margin: 0 20px 0 15px;
         }
 
+        .icon-notification {
+
+            .notification-status {
+                top: -5px;
+                left: -5px;
+            }
+        }
+        
+        .user-name {
+            color: #56819f;
+            font-size: 13px;
+        }
+        
         .icon-arrow-down {
             font-size: 12px;
+            margin-bottom: -3px;
+        }
+        
+        &:hover {
+            background-color: #f5f5f2;
         }
     }
 }
@@ -68,6 +198,8 @@
     }
 
     .aside-menu {
+        padding-bottom: 26px;
+
         ul {
 
             li {
@@ -79,9 +211,11 @@
                 }
 
                 a {
-                    display: block;
                     padding: 14px;
                     border-left: 4px solid transparent;
+                    display: flex;
+                    align-items: center;
+
 
                     [class*='icon-'] {
                         font-size: 17px;
@@ -92,6 +226,38 @@
                         @extend %activeLink;
                     }
                 }
+            }
+        }
+    }
+
+    .your-manager {
+        padding: 26px 18px;
+        border-top: 2px solid #333333;
+
+        .manager-title {
+            font-weight: $fontMedium;
+            color: #808080;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .manager-info {
+
+            .manager-img {
+                border-radius: 50%;
+                margin-right: 10px;
+
+                .notification-status {
+                    height: 11px;
+                    width: 11px;
+                    top: 0;
+                    right: 0;
+                }
+            }
+            
+            .manager-name {
+                color: #56819f;
             }
         }
     }
