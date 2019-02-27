@@ -1,4 +1,13 @@
-// titles
+// CONTAINER
+.container {
+    margin: 0 auto;
+
+    &.sm {
+        max-width: 684px;
+    }
+}
+
+// TITLE
 %title {
     color: $titleColor;
     font-size: $titleFontSize;
@@ -12,7 +21,7 @@
     @extend %title;
 }
 
-// buttons
+// BUTTON
 .btn {
     font-weight: $fontLight;
     border-radius: 2px;
@@ -107,7 +116,7 @@
     }
 }
 
-// decoration components
+// DECORATION COMPONENTS
 .notification-status {
     display: inline-block;
     height: 8px;
@@ -123,7 +132,7 @@
     }
 }
 
-// header
+// HEADER
 #header {
     width: 100%;
     border-bottom: 1px solid $lightGrey;
@@ -136,6 +145,15 @@
         font-size: 20px;
         color: $darkGrey;
         cursor: pointer;
+        position: relative;
+
+        &.open {
+            background-color: $xsLightGrey;
+
+            .icon-arrow-down {
+                transform: rotate(180deg);
+            }
+        }
 
         span {
             margin: 0 20px 0 15px;
@@ -156,7 +174,8 @@
         
         .icon-arrow-down {
             font-size: 12px;
-            margin-bottom: -3px;
+            margin-bottom: -1px;
+            line-height: 0;
         }
         
         &:hover {
@@ -164,7 +183,7 @@
         }
     }
 }
-// aside
+// ASIDE
 %activeLink {
     border-left-color: $orange;
     background-color: $activeLinkBg;
@@ -263,13 +282,13 @@
     }
 }
 
-// content
+// CONTENT
 .content-wrapper {
     padding: 18px;
     height: calc(100vh - 62px);
     overflow-y: auto;
 }
-// card
+// CARD
 .card {
     background-color: $cardBg;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -277,5 +296,91 @@
     .card-header {
         border-bottom: 1px solid $lightGrey;
         padding: 18px;
+    }
+
+    .card-date {
+        padding: 30px 0;
+        border-bottom: 1px solid $lightGrey;
+    }
+}
+
+// DATEPICKER
+.datepicker-form {
+
+    .date-input-wrap {
+        padding: 5px 0;
+        display: inline-block;
+        border: 1px solid $lightGrey;
+        border-radius: 3px;
+        color: $black;
+        margin-right: 10px;
+        vertical-align: middle;
+
+        input {
+            padding: 11px 16px;
+            vertical-align: middle;
+
+            &#to {
+                border-left: 1px solid $lightGrey;
+            }
+        }
+
+        label {
+            display: inline-block;
+            padding: 0 14px 0 10px;
+            vertical-align: middle;
+        }
+    }
+
+    .btn {
+        vertical-align: middle;
+        line-height: 0;
+    }
+}
+
+// DROPDOWN
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    padding: 10px 18px 24px;
+    background-color: $xsLightGrey;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+// TABLE
+.table {
+    font-size: $tableFontSize;
+    border-collapse: collapse;
+
+    tBody {
+        tr {
+            transition: all .2s linear;
+
+            &:hover {
+                background-color: $tableTrHover;
+
+                .hide-icon {
+                    opacity: 1;
+                }
+            }
+            &:last-child {
+
+                td {
+                    border-bottom: 1px solid $xsLightGrey;
+                }
+            }
+        }
+    }
+
+    td {
+        padding: 18px;
+        border-top: 1px solid $lightGrey;
+
+        .hide-icon {
+            opacity: 0;
+            transition: all .2s linear;
+        }
     }
 }

@@ -1,4 +1,4 @@
-// flex
+// FLEX
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +12,8 @@
 .justify-end {
     justify-content: flex-end;
 }
-// position
+
+// POSITION
 .fixed-top {
     position: fixed;
     z-index: 99;
@@ -25,4 +26,27 @@
 }
 .relative {
     position: relative;
+}
+
+// TEXT-ALIGN
+.text-center {
+    text-align: center;
+}
+
+// TEXT-COLOR
+.text-orange {
+    color: $orange;
+}
+.text-grey {
+    color: $grey;
+}
+
+// TEXT-WEIGHT
+.text-bold {
+    font-weight: 700;
+}
+
+// WIDTH
+.full-width {
+    width: 100%;
 }
