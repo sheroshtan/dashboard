@@ -246,12 +246,33 @@ button {
   width: 100%;
 }
 
+.lineHeight-null {
+  line-height: 0;
+}
+
 .container {
   margin: 0 auto;
 }
 
 .container.sm {
   max-width: 684px;
+}
+
+a {
+  color: #56819f;
+  cursor: pointer;
+}
+
+a.link-big {
+  font-size: 16px;
+}
+
+a.link-small {
+  font-size: 13px;
+}
+
+a:hover {
+  color: #ffa200;
 }
 
 .page-title, .section-title {
@@ -473,10 +494,6 @@ button {
   padding-bottom: 26px;
 }
 
-#aside .aside-menu ul li {
-  color: #979797;
-}
-
 #aside .aside-menu ul li a {
   padding: 14px;
   border-left: 4px solid transparent;
@@ -488,6 +505,7 @@ button {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #979797;
 }
 
 #aside .aside-menu ul li a [class*='icon-'] {
@@ -589,9 +607,33 @@ button {
   right: 0;
 }
 
+.dropdown-menu .dropdown-link {
+  font-size: 12px;
+  color: #9c9c9c;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.dropdown-menu .dropdown-link .dropdown-price {
+  color: #000000;
+  font-style: normal;
+}
+
 .table {
   font-size: 13px;
   border-collapse: collapse;
+}
+
+.table.table-links {
+  font-size: 16px;
+}
+
+.table.table-links .icon-links {
+  margin-right: 20px;
+}
+
+.table [class*="icon-"] {
+  cursor: pointer;
 }
 
 .table tBody tr {
@@ -627,4 +669,8 @@ button {
 #main {
   padding-left: 188px;
   padding-top: 62px;
+}
+
+.links .btn-row {
+  padding: 23px 0;
 }
