@@ -36,4 +36,11 @@
         }
     });
 
+    // loader hide
+    var loader = $('#loading');
+
+    $(window).on('load', function(e){
+        loader.addClass('hide');
+    });
+
 })(jQuery);
