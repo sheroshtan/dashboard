@@ -17,3 +17,62 @@
 .details {
     padding: 0 15px;
 }
+._mobileSidebar {
+
+    #main {
+        padding-left: $asideMobileWidth;
+    }
+
+    #aside {
+        width: $asideMobileWidth;
+
+        .logo {
+            display: none;
+        }
+
+        .menu-control {
+            justify-content: center;
+        }
+
+        .aside-menu {
+
+            li {
+                text-align: center;
+                position: relative;
+
+                &:hover {
+                    a {
+                        span {
+                            display: flex;
+                            align-items: center;
+                            padding-left: 20px;
+                        }
+                    }
+                }
+
+                a {
+                    justify-content: center;
+
+                    i {
+                        line-height: 0;
+                        margin-right: 0;
+                        margin-left: -2px;
+                    }
+                    span {
+                        display: none;
+                        position: absolute;
+                        background-color: $activeLinkBg;
+                        left: 100%;
+                        top: 0;
+                        height: 100%;
+                        min-width: 150px;
+                    }
+                }
+            }
+        }
+
+        .your-manager {
+            display: none;
+        }
+    }
+}

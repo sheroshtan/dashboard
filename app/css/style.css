@@ -781,3 +781,66 @@ a:hover {
 .details {
   padding: 0 15px;
 }
+
+._mobileSidebar #main {
+  padding-left: 60px;
+}
+
+._mobileSidebar #aside {
+  width: 60px;
+}
+
+._mobileSidebar #aside .logo {
+  display: none;
+}
+
+._mobileSidebar #aside .menu-control {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+._mobileSidebar #aside .aside-menu li {
+  text-align: center;
+  position: relative;
+}
+
+._mobileSidebar #aside .aside-menu li:hover a span {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 20px;
+}
+
+._mobileSidebar #aside .aside-menu li a {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+._mobileSidebar #aside .aside-menu li a i {
+  line-height: 0;
+  margin-right: 0;
+  margin-left: -2px;
+}
+
+._mobileSidebar #aside .aside-menu li a span {
+  display: none;
+  position: absolute;
+  background-color: #282828;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  min-width: 150px;
+}
+
+._mobileSidebar #aside .your-manager {
+  display: none;
+}

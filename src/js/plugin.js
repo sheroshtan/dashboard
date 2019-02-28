@@ -9,4 +9,31 @@
        $(this).toggleClass('open');
     });
 
+    // toggle sidebar menu
+    var menuBtn = $('.menu-btn');
+    var body = $('body');
+    var mobileClass = '_mobileSidebar';
+    var openInMobile = '_openInMobile';
+    var mobileBreakPoint = 1280;
+
+    menuBtn.on('click', function(e){
+        var width = $(window).width(); // get browser resolution
+        body.toggleClass(mobileClass);
+
+        if(width < mobileBreakPoint) {
+            body.addClass(openInMobile);
+        }
+    });
+
+    $(window).on('resize load', function(e){
+        var width = $(this).width();
+
+        if(width < mobileBreakPoint && !body.hasClass(openInMobile)) {
+            body.addClass(mobileClass);
+        } else if(width >= mobileBreakPoint){
+            body.removeClass(mobileClass);
+            body.removeClass(openInMobile);
+        }
+    });
+
 })(jQuery);
