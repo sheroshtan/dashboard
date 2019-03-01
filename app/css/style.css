@@ -452,8 +452,10 @@ a:hover {
 }
 
 .input-group .form-control.text-area {
-  min-height: 100px;
+  min-height: 180px;
   font-size: 12px;
+  width: 100%;
+  resize: none;
 }
 
 .input-group .form-control[disabled] {
@@ -645,6 +647,12 @@ a:hover {
 .card .card-header {
   border-bottom: 1px solid #e3e3e3;
   padding: 18px;
+}
+
+.card .card-header .icon-close {
+  font-size: 12px;
+  color: #a6a6a6;
+  cursor: pointer;
 }
 
 .card .card-date {
@@ -1699,6 +1707,8 @@ input[type='submit'].styler[disabled] {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 23px;
+  padding-bottom: 23px;
 }
 
 ._mobileSidebar #aside .aside-menu li {
@@ -1742,5 +1752,19 @@ input[type='submit'].styler[disabled] {
 }
 
 ._mobileSidebar #aside .your-manager {
+  padding: 16px 10px 10px;
+}
+
+._mobileSidebar #aside .your-manager .manager-title {
+  display: none;
+}
+
+._mobileSidebar #aside .your-manager .manager-info .manager-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 0;
+}
+
+._mobileSidebar #aside .your-manager .manager-info .manager-name {
   display: none;
 }

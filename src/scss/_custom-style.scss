@@ -32,6 +32,8 @@
 
         .menu-control {
             justify-content: center;
+            padding-top: 23px;
+            padding-bottom: 23px;
         }
 
         .aside-menu {
@@ -72,7 +74,23 @@
         }
 
         .your-manager {
-            display: none;
+            padding: 16px 10px 10px;
+
+            .manager-title {
+                display: none;
+            }
+
+            .manager-info {
+
+                .manager-img {
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 0;
+                }
+                .manager-name {
+                    display: none;
+                }
+            }
         }
     }
 }
