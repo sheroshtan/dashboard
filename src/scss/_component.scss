@@ -152,12 +152,12 @@ a {
         left: 15px;
     }
 
-    .input-form {
-        padding: 13px;
+    .form-control {
+        padding: 13px 16px;
         font-size: 14px;
         line-height: $lineHeight;
-        border-radius: 4px;
-        border: 2px solid $inputBorderColor;
+        border-radius: 3px;
+        border: 1px solid $inputBorderColor;
         color: $inputColor;
         cursor: pointer;
 
@@ -381,8 +381,20 @@ a {
     }
 
     .card-form {
+
         .select-group {
             padding: 18px;
+
+            .section-title {
+                margin-bottom: 18px;
+            }
+
+            .input-group {
+
+                & + .input-group {
+                    margin-left: 18px;
+                }
+            }
         }
         .input-group {
             label {
@@ -591,6 +603,8 @@ a {
 
     &#links {
         width: 70%;
-        min-height: 100px;
+    }
+    &#banners {
+        width: 70%;
     }
 }

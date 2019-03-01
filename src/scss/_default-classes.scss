@@ -15,7 +15,9 @@
 .align-self-end {
     align-self: flex-end;
 }
-
+.flex-grow-one {
+    flex-grow: 1;
+}
 // POSITION
 .fixed-top {
     position: fixed;
