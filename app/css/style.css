@@ -2177,12 +2177,26 @@ input[type="checkbox"]:checked + label::before {
   background: #04ae00 url("../img/checkbox-bg.png") no-repeat center;
 }
 
+.checkboxes-column .checkbox-wrap {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+}
+
+.checkboxes-column .checkbox-wrap .checkboxes .checkbox-group {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+}
+
 .checkbox-wrap {
-  padding: 30px 18px;
+  padding: 30px 18px 0;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
 }
 
 .checkbox-wrap .checkboxes {
-  height: 170px;
+  height: 254px;
 }
 
 .checkbox-wrap .checkboxes .checkbox-group {
@@ -2393,12 +2407,12 @@ input[type="checkbox"]:checked + label::before {
   border-bottom: 1px solid #e3e3e3;
 }
 
-.card .card-form .select-group {
-  padding: 18px;
+.card .card-form .section-title {
+  margin-bottom: 18px;
 }
 
-.card .card-form .select-group .section-title {
-  margin-bottom: 18px;
+.card .card-form .select-group {
+  padding: 18px;
 }
 
 .card .card-form .select-group .input-group + .input-group {
@@ -2719,6 +2733,10 @@ input[type="checkbox"]:checked + label::before {
 
 ._mobileSidebar #aside .your-manager .manager-info .manager-name {
   display: none;
+}
+
+.generate-links {
+  padding: 15px;
 }
 
 .generate-links input[type="text"] {

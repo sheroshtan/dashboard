@@ -221,12 +221,26 @@ input[type="checkbox"] {
         }
     }
 }
+.checkboxes-column {
 
+    .checkbox-wrap {
+        flex-basis: 50%;
+
+        .checkboxes{
+
+            .checkbox-group {
+                flex-basis: 100%;
+            }
+        }
+    }
+}
 .checkbox-wrap {
-    padding: 30px 18px;
+    padding: 30px 18px 0;
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
 
     .checkboxes {
-        height: 170px;
+        height: 254px;
 
         .checkbox-group {
             padding: 12px 30px 12px 12px;
@@ -444,12 +458,12 @@ input[type="checkbox"] {
 
     .card-form {
 
+        .section-title {
+            margin-bottom: 18px;
+        }
         .select-group {
             padding: 18px;
 
-            .section-title {
-                margin-bottom: 18px;
-            }
 
             .input-group {
 
