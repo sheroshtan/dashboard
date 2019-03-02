@@ -112,3 +112,68 @@
 .range-title {
     display: block;
 }
+
+.chart-statistic {
+    font-size: 16px;
+    flex-wrap: nowrap;
+    padding-top: 16px;
+    margin-bottom: 60px;
+
+    .statistic-column {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        & + .statistic-column {
+            margin-left: 60px;
+        }
+        .statistic-name {
+            display: flex;
+            justify-content: space-between;
+            font-weight: $fontBold;
+            color: $titleColor;
+            border-bottom: 1px solid $xsLightGrey;
+            padding: 22px 0 8px;
+
+            .statistic-count {
+                font-weight: $fontLight;
+                color: #333333;
+            }
+        }
+    }
+}
+
+.chart-wrap {
+    .section-title {
+        margin-bottom: 40px;
+    }
+}
+#personal-form {
+    .personal-data {
+        border-bottom: 1px solid $xsLightGrey;
+        padding: 40px 15px;
+
+        .personal-data-group {
+            width: 456px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+
+            .input-group {
+                display: flex;
+                justify-content: space-between;
+
+                input {
+                    width: 306px;
+                }
+
+                & + .input-group {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+    .btn-row {
+        padding: 23px 0;
+    }
+}
+

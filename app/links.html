@@ -39,11 +39,11 @@
                 <span class="notification-status status-orange"></span>
             </i>
         </div>
-        <div class="user-control flex-container align-center">
+        <div class="user-control flex-container align-center" data-modal data-target="#login">
             <i class="icon-profile"></i>
             <span class="user-name">Leonardo Dicaprio</span>
         </div>
-        <div class="user-control flex-container align-center">
+        <div class="user-control flex-container align-center" data-modal data-target="#quit">
             <i class="icon-quit"></i>
         </div>
     </div>
@@ -90,7 +90,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="./personaldata.html">
                     <i class="icon-personaldata"></i>
                     <span>Personal data</span>
                 </a>
@@ -472,6 +472,41 @@
                         <button class="btn btn-orange">Save</button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="login">
+    <div class="card">
+        <div class="card-header flex-container justify-sb align-center">
+            <span class="page-title">login</span>
+        </div>
+        <div class="card-body">
+            <div class="card-form">
+                <form action="" id="login-form">
+                    <div class="input-group">
+                        <label for="login-name" class="icon-login"></label>
+                        <input type="text" id="login-name" class="form-control input-w-icon" placeholder="login name">
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password" class="icon-password"></label>
+                        <input type="password" id="login-password" class="form-control input-w-icon" placeholder="password">
+                    </div>
+                    <button class="btn btn-orange">Enter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" id="quit">
+    <div class="card">
+        <div class="card-header flex-container justify-sb align-center modal-title-sm">
+            <span>Do you really want to Quit?</span>
+        </div>
+        <div class="card-body">
+            <div class="btn-row modal-quit">
+                <button class="btn btn-default close-modal">Cancel</button>
+                <button class="btn btn-orange">Quit</button>
             </div>
         </div>
     </div>

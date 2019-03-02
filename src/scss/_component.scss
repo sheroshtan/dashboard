@@ -144,12 +144,13 @@ a {
 .input-group {
     position: relative;
 
-    i {
-        font-size: 20px;
+    [class*="icon-"] {
+        font-size: 18px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         left: 15px;
+        line-height: 0;
     }
 }
  .form-control {
@@ -161,7 +162,7 @@ a {
      color: $inputColor;
      cursor: pointer;
 
-     &[type="password"] {
+     &.input-w-icon {
          padding-left: 44px;
 
      }
@@ -687,15 +688,61 @@ input[type="checkbox"] {
     &#banners {
         width: 70%;
     }
+    &#quit {
+        width: 360px;
+
+        .modal-title-sm {
+            border-bottom: 1px solid $xsLightGrey;
+            font-weight: $fontMedium;
+            color: #a6a6a6;
+        }
+        .btn-row {
+            padding: 15px;
+            text-align: right;
+
+            button {
+
+                & + button {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    &#login {
+        width: 70%;
+
+        .card-form {
+            display: flex;
+            justify-content: center;
+            padding: 48px;
+
+            #login-form {
+                display: flex;
+
+                .input-group {
+
+                    & + .input-group {
+                        margin-left: 18px;
+                    }
+                }
+                .btn {
+                    margin-left: 18px;
+                    width: 140px;
+                }
+            }
+        }
+    }
 }
 
 // RANGE SLIDER
 #custom-handle {
     position: absolute;
-    top: 12px;
+    top: -4px;
     width: 0;
     height: 0;
-    border: 10px solid transparent;
+    border: 22px solid transparent;
+    border-left-width: 16px;
+    border-right-width: 16px;
     border-bottom-color: $orange;
     background-color: transparent;
 
@@ -708,7 +755,7 @@ input[type="checkbox"] {
 
     span {
         position: absolute;
-        top: 20px;
+        top: 35px;
         color: #333;
         transform: translateX(-50%);
         user-select: none;

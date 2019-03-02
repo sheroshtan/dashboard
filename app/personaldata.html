@@ -65,7 +65,7 @@
     </div>
     <div class="aside-menu">
         <ul>
-            <li class="active">
+            <li>
                 <a href="./index.html">
                     <i class="icon-general"></i>
                     <span>General</span>
@@ -89,7 +89,7 @@
                     <span>Banners</span>
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a href="./personaldata.html">
                     <i class="icon-personaldata"></i>
                     <span>Personal data</span>
@@ -128,37 +128,70 @@
     <div class="content-wrapper">
         <div class="card">
             <div class="card-header">
-                <span class="page-title">General statistic</span>
-            </div>
-            <div class="card-date text-center">
-                <form class="datepicker-form">
-                    <div class="date-input-wrap">
-                        <input type="text" name="from" id="from">
-                        <input type="text" name="to" id="to">
-                        <label for="from"><i class="icon-calendar"></i></label>
-                    </div>
-                    <button class="btn btn-orange"><i class="icon-refresh"></i></button>
-                </form>
+                <span class="page-title">Personal data</span>
             </div>
             <div class="card-body">
-                <div class="container sm">
-                    <div class="chart-statistic flex-container">
-                        <div class="statistic-column">
-                            <span class="statistic-name">Visit signups <span class="statistic-count">124</span></span>
-                            <span class="statistic-name">FTD <span class="statistic-count">445</span></span>
-                        </div>
-                        <div class="statistic-column">
-                            <span class="statistic-name">Net deposit <span class="statistic-count">564</span></span>
-                            <span class="statistic-name">Turn over <span class="statistic-count">432</span></span>
+                <form action="" id="personal-form">
+                    <div class="personal-data">
+                        <div class="personal-data-group">
+                            <div class="input-group flex-container align-center">
+                                <label for="personal-name" class="section-title">Name</label>
+                                <input type="text" id="personal-name" class="form-control">
+                            </div>
+                            <div class="input-group flex-container align-center">
+                                <label for="personal-surname" class="section-title">Surname</label>
+                                <input type="text" id="personal-surname" class="form-control">
+                            </div>
+                            <div class="input-group flex-container align-center">
+                                <label for="personal-email" class="section-title">E-mail</label>
+                                <input type="text" id="personal-email" class="form-control">
+                            </div>
+                            <div class="input-group flex-container align-center">
+                                <label for="personal-phone" class="section-title">Phone number</label>
+                                <input type="text" id="personal-phone" class="form-control">
+                            </div>
                         </div>
                     </div>
-                    <div class="chart-wrap">
-                        <div class="section-title">
-                            <span>Earnings chart</span>
+                    <div class="personal-data">
+                        <div class="personal-data-group">
+                            <div class="input-group flex-container align-center">
+                                <label for="personal-skype" class="section-title">Skype</label>
+                                <input type="text" id="personal-skype" class="form-control">
+                            </div>
+                            <div class="input-group flex-container align-center">
+                                <label for="personal-icq" class="section-title">ICQ</label>
+                                <input type="text" id="personal-icq" class="form-control">
+                            </div>
+                            <div class="input-group flex-container align-center">
+                                <label for="personal-msn" class="section-title">Msn</label>
+                                <input type="text" id="personal-msn" class="form-control">
+                            </div>
                         </div>
-                        <canvas id="myChart" width="600" height="400"></canvas>
                     </div>
-                </div>
+                    <div class="personal-data">
+                        <div class="personal-data-group">
+                            <div class="input-group flex-container align-center">
+                                <label for="personal-wallet" class="section-title">Wallet</label>
+                                <input type="text" id="personal-wallet" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personal-data">
+                        <div class="personal-data-group">
+                            <div class="input-group flex-container align-center">
+                                <label for="personal-password" class="section-title">Password</label>
+                                <input type="password" id="personal-password" class="form-control">
+                            </div>
+                            <div class="input-group flex-container align-center">
+                                <label for="personal-password-repeat" class="section-title">Repeat</label>
+                                <input type="password" id="personal-password-repeat" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-row text-center">
+                        <button class="btn btn-orange">Save</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
