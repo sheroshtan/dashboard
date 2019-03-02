@@ -140,7 +140,11 @@
                     <button class="btn btn-orange"><i class="icon-refresh"></i></button>
                 </form>
             </div>
-            <div class="card-body"></div>
+            <div class="card-body">
+                <div class="chart-wrap">
+                    <canvas id="myChart" width="600" height="400"></canvas>
+                </div>
+            </div>
         </div>
     </div>
 </main>
@@ -157,8 +161,10 @@
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 <script src="js/jquery.bpopup.min.js"></script>
 <script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
 <!-- init plugins -->
 <script src="js/init.js"></script>
 <script src="js/plugins.min.js"></script>

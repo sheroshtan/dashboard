@@ -94,3 +94,11 @@
         }
     }
 }
+.generate-links {
+    input[type="text"] {
+        flex-grow: 1;
+    }
+    .btn {
+        margin-left: 15px;
+    }
+}
