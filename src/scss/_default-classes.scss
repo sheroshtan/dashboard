@@ -46,6 +46,12 @@
     color: $grey;
 }
 
+.text-warning {
+    color: $red;
+    text-transform: uppercase;
+    font-weight: $fontBold;
+}
+
 // TEXT-WEIGHT
 .text-bold {
     font-weight: 700;

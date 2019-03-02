@@ -1920,6 +1920,12 @@ input[type='submit'].styler[disabled] {
   color: #bababa;
 }
 
+.text-warning {
+  color: #ff0000;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 .text-bold {
   font-weight: 700;
 }
@@ -2177,22 +2183,29 @@ input[type="checkbox"]:checked + label::before {
   background: #04ae00 url("../img/checkbox-bg.png") no-repeat center;
 }
 
-.checkboxes-column .checkbox-wrap {
+.column-wrap {
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.column-wrap .checkbox-wrap {
   -webkit-flex-basis: 50%;
       -ms-flex-preferred-size: 50%;
           flex-basis: 50%;
 }
 
-.checkboxes-column .checkbox-wrap .checkboxes .checkbox-group {
+.column-wrap .checkbox-wrap .checkboxes .checkbox-group {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
 }
 
+.column-wrap .checkbox-wrap + .checkbox-wrap {
+  border-left: 1px solid #e3e3e3;
+}
+
 .checkbox-wrap {
   padding: 30px 18px 0;
-  border-top: 1px solid #e3e3e3;
-  border-bottom: 1px solid #e3e3e3;
 }
 
 .checkbox-wrap .checkboxes {
@@ -2639,6 +2652,45 @@ input[type="checkbox"]:checked + label::before {
   width: 70%;
 }
 
+#custom-handle {
+  position: absolute;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #f58220;
+  background-color: transparent;
+}
+
+#custom-handle:active {
+  outline: none;
+}
+
+#custom-handle:focus {
+  outline: none;
+}
+
+#custom-handle span {
+  position: absolute;
+  top: 20px;
+  color: #333;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#custom-handle span:active {
+  color: #333;
+}
+
+.ui-widget-header {
+  background-color: #f58220;
+}
+
 #main {
   padding-left: 188px;
   padding-top: 62px;
@@ -2748,4 +2800,13 @@ input[type="checkbox"]:checked + label::before {
 
 .generate-links .btn {
   margin-left: 15px;
+}
+
+.create-pixel {
+  padding: 15px;
+  text-align: right;
+}
+
+.range-title {
+  display: block;
 }

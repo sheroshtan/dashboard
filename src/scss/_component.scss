@@ -221,7 +221,9 @@ input[type="checkbox"] {
         }
     }
 }
-.checkboxes-column {
+.column-wrap {
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
 
     .checkbox-wrap {
         flex-basis: 50%;
@@ -232,12 +234,14 @@ input[type="checkbox"] {
                 flex-basis: 100%;
             }
         }
+
+        & + .checkbox-wrap {
+            border-left: 1px solid #e3e3e3;
+        }
     }
 }
 .checkbox-wrap {
     padding: 30px 18px 0;
-    border-top: 1px solid #e3e3e3;
-    border-bottom: 1px solid #e3e3e3;
 
     .checkboxes {
         height: 254px;
@@ -683,4 +687,37 @@ input[type="checkbox"] {
     &#banners {
         width: 70%;
     }
+}
+
+// RANGE SLIDER
+#custom-handle {
+    position: absolute;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: $orange;
+    background-color: transparent;
+
+    &:active {
+        outline: none;
+    }
+    &:focus {
+        outline: none;
+    }
+
+    span {
+        position: absolute;
+        top: 20px;
+        color: #333;
+        transform: translateX(-50%);
+        user-select: none;
+
+        &:active {
+            color: #333;
+        }
+    }
+}
+.ui-widget-header {
+    background-color: $orange;
 }
