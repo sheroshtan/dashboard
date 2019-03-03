@@ -73,6 +73,10 @@ a {
 
     &.link-big {
         font-size: $linkFontSizeLarge;
+
+        @media (max-width: 575px) {
+            font-size: 12px;
+        }
     }
 
     &.link-small {
@@ -228,6 +232,9 @@ input[type="checkbox"] {
 
     .checkbox-wrap {
         flex-basis: 50%;
+        @media (max-width: 575px) {
+            flex-basis: 100%;
+        }
 
         .checkboxes{
 
@@ -244,6 +251,11 @@ input[type="checkbox"] {
 .checkbox-wrap {
     padding: 30px 18px 0;
 
+    @media (max-width: 767px) {
+        padding-left: 18px;
+        padding-right: 0;
+    }
+
     .checkboxes {
         height: 254px;
 
@@ -251,6 +263,15 @@ input[type="checkbox"] {
             padding: 12px 30px 12px 12px;
             flex-grow: 1;
             flex-basis: 33%;
+            @media (max-width: 767px) {
+                flex-basis: 100%;
+            }
+            @media (min-width: 768px) {
+                flex-basis: 50%;
+            }
+            @media (min-width: 992px) {
+                flex-basis: 33%;
+            }
 
             &:hover {
                 background-color: $xsLightGrey;
@@ -309,6 +330,10 @@ input[type="checkbox"] {
 
         span {
             margin: 0 20px 0 15px;
+
+            @media (max-width: 575px) {
+                display: none;
+            }
         }
 
         .icon-notification {
@@ -318,10 +343,15 @@ input[type="checkbox"] {
                 left: -5px;
             }
         }
+
+        .icon-wallet {
+            margin-right: 18px;
+        }
         
         .user-name {
             color: #56819f;
             font-size: 13px;
+
         }
         
         .icon-arrow-down {
@@ -456,6 +486,24 @@ input[type="checkbox"] {
         }
     }
 
+    .card-body {
+
+        .wrapper {
+            @media (max-width: 575px) {
+                overflow-x: scroll;
+            }
+        }
+        .btn-row {
+            padding: 23px 0;
+
+            .btn {
+                @media (max-width: 575px) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
     .card-date {
         padding: 30px 0;
         border-bottom: 1px solid $lightGrey;
@@ -471,9 +519,21 @@ input[type="checkbox"] {
 
 
             .input-group {
+                @media (max-width: 767px) {
+                    flex-grow: 0;
+                    width: 100%;
+                }
+            }
+
+            .input-group {
 
                 & + .input-group {
                     margin-left: 18px;
+
+                    @media (max-width: 767px) {
+                        margin-left: 0;
+                        margin-top: 18px;
+                    }
                 }
             }
         }
@@ -541,6 +601,10 @@ input[type="checkbox"] {
         .dropdown-price {
             color: #000000;
             font-style: normal;
+
+            @media (max-width: 575px) {
+                display: none;
+            }
         }
     }
 }
@@ -550,8 +614,13 @@ input[type="checkbox"] {
     font-size: $tableFontSize;
     border-collapse: collapse;
 
+
     &.table-links {
         font-size: 16px;
+
+        @media (max-width: 575px) {
+            font-size: 12px;
+        }
 
         .icon-links {
             margin-right: 20px;
@@ -621,6 +690,10 @@ input[type="checkbox"] {
         padding: 18px;
         border-top: 1px solid $lightGrey;
 
+        @media (max-width: 575px) {
+            padding: 16px;
+        }
+
         .hide-icon {
             opacity: 0;
             transition: all .2s linear;
@@ -684,9 +757,36 @@ input[type="checkbox"] {
 
     &#links {
         width: 70%;
+        @media (max-width: 767px) {
+            width: 80%;
+        }
+
+        .modal-name {
+            @media (max-width: 991px) {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+        .input-group {
+
+            & + .input-group {
+                @media (max-width: 991px) {
+                    margin-left: 0;
+                }
+                &.lang {
+                    @media (min-width: 768px) {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
     }
     &#banners {
         width: 70%;
+        @media (max-width: 767px) {
+            width: 80%;
+        }
     }
     &#quit {
         width: 360px;

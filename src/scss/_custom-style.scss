@@ -5,8 +5,7 @@
 }
 
 // links page
-.links {
-
+.wrapper {
     .btn-row {
         padding: 23px 0;
     }
@@ -96,11 +95,26 @@
 }
 .generate-links {
     padding: 15px;
+    @media (max-width: 767px) {
+        justify-content: center;
+    }
     input[type="text"] {
         flex-grow: 1;
+        @media (max-width: 767px) {
+            width: 80%;
+            flex-grow: 0;
+        }
     }
     .btn {
         margin-left: 15px;
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+        @media (max-width: 767px) {
+            margin-top: 15px;
+            margin-left: 0;
+            width: 80%;
+        }
     }
 }
 

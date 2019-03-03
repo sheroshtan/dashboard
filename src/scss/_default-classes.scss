@@ -71,3 +71,16 @@
 .ml-auto {
     margin-left: auto;
 }
+
+//
+.hidden-xs {
+    @media (max-width: 575px) {
+        display: none;
+    }
+}
+
+.hidden-md {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
