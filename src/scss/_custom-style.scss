@@ -12,9 +12,17 @@
 }
 .payout {
     padding: 0 15px;
+
+    @media (max-width: 1199px) {
+        overflow-x: scroll;
+    }
 }
 .details {
     padding: 0 15px;
+
+    @media (max-width: 1199px) {
+        overflow-x: scroll;
+    }
 }
 ._mobileSidebar {
 
@@ -119,8 +127,24 @@
 }
 
 .create-pixel {
-    padding: 15px;
+
     text-align: right;
+
+    @media (max-width: 767px) {
+        text-align: center;
+    }
+
+    .btn {
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+        @media (max-width: 767px) {
+            margin-top: 80px;
+        }
+        @media (min-width: 768px) {
+            margin-right: 15px;
+        }
+    }
 }
 
 .range-title {
@@ -133,12 +157,29 @@
     padding-top: 16px;
     margin-bottom: 60px;
 
+    @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    @media (max-width: 991px) {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
     .statistic-column {
         display: flex;
         flex-direction: column;
         width: 50%;
+
+        @media (max-width: 767px) {
+            width: 80%;
+        }
         & + .statistic-column {
             margin-left: 60px;
+
+            @media (max-width: 767px) {
+                margin-left: 0;
+            }
         }
         .statistic-name {
             display: flex;
@@ -159,6 +200,12 @@
 .chart-wrap {
     .section-title {
         margin-bottom: 40px;
+        @media (max-width: 991px) {
+            padding-left: 5px;
+        }
+    }
+    @media (max-width: 767px) {
+        text-align: center;
     }
 }
 #personal-form {
@@ -172,12 +219,29 @@
             flex-direction: column;
             margin: 0 auto;
 
+            @media (max-width: 575px) {
+                width: 100%;
+            }
+
             .input-group {
                 display: flex;
                 justify-content: space-between;
 
+                .section-title {
+                    @media (max-width: 575px) {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                @media (max-width: 575px) {
+                    flex-direction: column;
+                }
+
                 input {
                     width: 306px;
+                    @media (max-width: 575px) {
+                        width: 100%;
+                    }
                 }
 
                 & + .input-group {
@@ -187,7 +251,44 @@
         }
     }
     .btn-row {
-        padding: 23px 0;
+        padding: 23px 15px;
+
+        .btn {
+            @media (max-width: 575px) {
+                width: 100%;
+            }
+        }
+    }
+}
+.postpack {
+
+    .card-form {
+
+        .column-wrap {
+            @media (max-width: 767px) {
+                border-bottom: none;
+            }
+            .checkbox-wrap {
+                @media (max-width: 767px) {
+                    flex-basis: 100%;
+                    padding-right: 5px;
+                    padding-left: 5px;
+                }
+
+                .range-title {
+
+                    @media (max-width: 767px) {
+                        margin-bottom: 50px;
+                        margin-left: 10px;
+                    }
+                }
+                .section-title {
+                    @media (max-width: 767px) {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
     }
 }
 

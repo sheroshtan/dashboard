@@ -2123,7 +2123,7 @@ a.link-big {
 
 @media (max-width: 575px) {
   a.link-big {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -2307,6 +2307,12 @@ input[type="checkbox"]:checked + label::before {
 
 .column-wrap .checkbox-wrap + .checkbox-wrap {
   border-left: 1px solid #e3e3e3;
+}
+
+@media (max-width: 767px) {
+  .column-wrap .checkbox-wrap + .checkbox-wrap {
+    border-left: none;
+  }
 }
 
 .checkbox-wrap {
@@ -2630,24 +2636,69 @@ input[type="checkbox"]:checked + label::before {
   vertical-align: middle;
 }
 
-.datepicker-form .date-input-wrap input {
+@media (max-width: 767px) {
+  .datepicker-form .date-input-wrap {
+    margin-right: 0;
+    border: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.datepicker-form input {
   padding: 11px 16px;
   vertical-align: middle;
 }
 
-.datepicker-form .date-input-wrap input#to {
+@media (max-width: 767px) {
+  .datepicker-form input {
+    border: 1px solid #e3e3e3;
+    width: 80%;
+  }
+}
+
+.datepicker-form input#to {
   border-left: 1px solid #e3e3e3;
 }
 
-.datepicker-form .date-input-wrap label {
+@media (max-width: 767px) {
+  .datepicker-form input#to {
+    margin-top: 5px;
+  }
+}
+
+.datepicker-form label {
   display: inline-block;
   padding: 0 14px 0 10px;
   vertical-align: middle;
 }
 
+@media (max-width: 767px) {
+  .datepicker-form label {
+    display: none;
+  }
+}
+
 .datepicker-form .btn {
   vertical-align: middle;
   line-height: 0;
+}
+
+@media (max-width: 767px) {
+  .datepicker-form .btn {
+    width: 80%;
+  }
 }
 
 .dropdown-menu {
@@ -2689,7 +2740,7 @@ input[type="checkbox"]:checked + label::before {
 
 @media (max-width: 575px) {
   .table.table-links {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -2794,11 +2845,24 @@ input[type="checkbox"]:checked + label::before {
   cursor: pointer;
 }
 
+@media (max-width: 575px) {
+  .pagination-wrap .pagination .pagination-item {
+    padding: 5px 8px;
+    font-size: 15px;
+  }
+}
+
 .pagination-wrap .pagination .pagination-item.pagination-prev {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 575px) {
+  .pagination-wrap .pagination .pagination-item.pagination-prev {
+    display: none;
+  }
 }
 
 .pagination-wrap .pagination .pagination-item.pagination-prev a {
@@ -2810,6 +2874,12 @@ input[type="checkbox"]:checked + label::before {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 575px) {
+  .pagination-wrap .pagination .pagination-item.pagination-next {
+    display: none;
+  }
 }
 
 .pagination-wrap .pagination .pagination-item.pagination-next a {
@@ -2884,6 +2954,12 @@ input[type="checkbox"]:checked + label::before {
   width: 360px;
 }
 
+@media (max-width: 767px) {
+  .modal#quit {
+    width: 80%;
+  }
+}
+
 .modal#quit .modal-title-sm {
   border-bottom: 1px solid #f5f5f5;
   font-weight: 500;
@@ -2895,12 +2971,31 @@ input[type="checkbox"]:checked + label::before {
   text-align: right;
 }
 
+@media (max-width: 575px) {
+  .modal#quit .btn-row {
+    text-align: center;
+  }
+}
+
 .modal#quit .btn-row button + button {
   margin-left: 20px;
 }
 
+@media (max-width: 575px) {
+  .modal#quit .btn-row button + button {
+    margin-left: 0;
+    margin-top: 14px;
+  }
+}
+
 .modal#login {
   width: 70%;
+}
+
+@media (max-width: 575px) {
+  .modal#login {
+    width: 80%;
+  }
 }
 
 .modal#login .card-form {
@@ -2922,13 +3017,42 @@ input[type="checkbox"]:checked + label::before {
   display: flex;
 }
 
+@media (max-width: 767px) {
+  .modal#login .card-form #login-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal#login .card-form #login-form .input-group {
+    margin-bottom: 14px;
+  }
+}
+
 .modal#login .card-form #login-form .input-group + .input-group {
   margin-left: 18px;
+}
+
+@media (max-width: 767px) {
+  .modal#login .card-form #login-form .input-group + .input-group {
+    margin-left: 0;
+  }
 }
 
 .modal#login .card-form #login-form .btn {
   margin-left: 18px;
   width: 140px;
+}
+
+@media (max-width: 767px) {
+  .modal#login .card-form #login-form .btn {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 #custom-handle {
@@ -2985,8 +3109,20 @@ input[type="checkbox"]:checked + label::before {
   padding: 0 15px;
 }
 
+@media (max-width: 1199px) {
+  .payout {
+    overflow-x: scroll;
+  }
+}
+
 .details {
   padding: 0 15px;
+}
+
+@media (max-width: 1199px) {
+  .details {
+    overflow-x: scroll;
+  }
 }
 
 ._mobileSidebar #main {
@@ -3117,8 +3253,31 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .create-pixel {
-  padding: 15px;
   text-align: right;
+}
+
+@media (max-width: 767px) {
+  .create-pixel {
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .create-pixel .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .create-pixel .btn {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .create-pixel .btn {
+    margin-right: 15px;
+  }
 }
 
 .range-title {
@@ -3134,6 +3293,27 @@ input[type="checkbox"]:checked + label::before {
   margin-bottom: 60px;
 }
 
+@media (max-width: 767px) {
+  .chart-statistic {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .chart-statistic {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
 .chart-statistic .statistic-column {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3147,8 +3327,20 @@ input[type="checkbox"]:checked + label::before {
   width: 50%;
 }
 
+@media (max-width: 767px) {
+  .chart-statistic .statistic-column {
+    width: 80%;
+  }
+}
+
 .chart-statistic .statistic-column + .statistic-column {
   margin-left: 60px;
+}
+
+@media (max-width: 767px) {
+  .chart-statistic .statistic-column + .statistic-column {
+    margin-left: 0;
+  }
 }
 
 .chart-statistic .statistic-column .statistic-name {
@@ -3175,6 +3367,18 @@ input[type="checkbox"]:checked + label::before {
   margin-bottom: 40px;
 }
 
+@media (max-width: 991px) {
+  .chart-wrap .section-title {
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .chart-wrap {
+    text-align: center;
+  }
+}
+
 #personal-form .personal-data {
   border-bottom: 1px solid #f5f5f5;
   padding: 40px 15px;
@@ -3194,6 +3398,12 @@ input[type="checkbox"]:checked + label::before {
   margin: 0 auto;
 }
 
+@media (max-width: 575px) {
+  #personal-form .personal-data .personal-data-group {
+    width: 100%;
+  }
+}
+
 #personal-form .personal-data .personal-data-group .input-group {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3205,8 +3415,30 @@ input[type="checkbox"]:checked + label::before {
           justify-content: space-between;
 }
 
+@media (max-width: 575px) {
+  #personal-form .personal-data .personal-data-group .input-group .section-title {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  #personal-form .personal-data .personal-data-group .input-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #personal-form .personal-data .personal-data-group .input-group input {
   width: 306px;
+}
+
+@media (max-width: 575px) {
+  #personal-form .personal-data .personal-data-group .input-group input {
+    width: 100%;
+  }
 }
 
 #personal-form .personal-data .personal-data-group .input-group + .input-group {
@@ -3214,5 +3446,40 @@ input[type="checkbox"]:checked + label::before {
 }
 
 #personal-form .btn-row {
-  padding: 23px 0;
+  padding: 23px 15px;
+}
+
+@media (max-width: 575px) {
+  #personal-form .btn-row .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .postpack .card-form .column-wrap {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .postpack .card-form .column-wrap .checkbox-wrap {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .postpack .card-form .column-wrap .checkbox-wrap .range-title {
+    margin-bottom: 50px;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .postpack .card-form .column-wrap .checkbox-wrap .section-title {
+    margin-left: 10px;
+  }
 }

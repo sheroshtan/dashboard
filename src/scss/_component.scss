@@ -75,7 +75,7 @@ a {
         font-size: $linkFontSizeLarge;
 
         @media (max-width: 575px) {
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 
@@ -245,6 +245,9 @@ input[type="checkbox"] {
 
         & + .checkbox-wrap {
             border-left: 1px solid #e3e3e3;
+            @media (max-width: 767px) {
+                border-left: none;
+            }
         }
     }
 }
@@ -560,12 +563,29 @@ input[type="checkbox"] {
         margin-right: 10px;
         vertical-align: middle;
 
+        @media (max-width: 767px) {
+            margin-right: 0;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            }
+        }
+
         input {
             padding: 11px 16px;
             vertical-align: middle;
+            @media (max-width: 767px) {
+                border: 1px solid $lightGrey;
+                width: 80%;
+            }
+
 
             &#to {
                 border-left: 1px solid $lightGrey;
+                @media (max-width: 767px) {
+                    margin-top: 5px;
+                }
             }
         }
 
@@ -573,12 +593,20 @@ input[type="checkbox"] {
             display: inline-block;
             padding: 0 14px 0 10px;
             vertical-align: middle;
+
+            @media (max-width: 767px) {
+                display: none;
+            }
         }
-    }
+
 
     .btn {
         vertical-align: middle;
         line-height: 0;
+
+        @media (max-width: 767px) {
+            width: 80%;
+        }
     }
 }
 
@@ -619,7 +647,7 @@ input[type="checkbox"] {
         font-size: 16px;
 
         @media (max-width: 575px) {
-            font-size: 12px;
+            font-size: 14px;
         }
 
         .icon-links {
@@ -715,8 +743,16 @@ input[type="checkbox"] {
             line-height: $lineHeight;
             cursor: pointer;
 
+            @media (max-width: 575px) {
+                padding: 5px 8px;
+                font-size: 15px;
+            }
+
             &.pagination-prev {
                 display: flex;
+                @media (max-width: 575px) {
+                    display: none;
+                }
                 a {
                     color: #a6a6a6;
 
@@ -726,6 +762,9 @@ input[type="checkbox"] {
                 }
             }
             &.pagination-next {
+                @media (max-width: 575px) {
+                    display: none;
+                }
                 a {
                     color: #a6a6a6;
 
@@ -790,6 +829,9 @@ input[type="checkbox"] {
     }
     &#quit {
         width: 360px;
+        @media (max-width: 767px) {
+            width: 80%;
+        }
 
         .modal-title-sm {
             border-bottom: 1px solid $xsLightGrey;
@@ -800,16 +842,28 @@ input[type="checkbox"] {
             padding: 15px;
             text-align: right;
 
+            @media (max-width: 575px) {
+                text-align: center;
+            }
+
             button {
 
                 & + button {
                     margin-left: 20px;
+
+                    @media (max-width: 575px) {
+                        margin-left: 0;
+                        margin-top: 14px;
+                    }
                 }
             }
         }
     }
     &#login {
         width: 70%;
+        @media (max-width: 575px) {
+            width: 80%;
+        }
 
         .card-form {
             display: flex;
@@ -819,15 +873,30 @@ input[type="checkbox"] {
             #login-form {
                 display: flex;
 
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                }
+
                 .input-group {
 
+                    @media (max-width: 767px) {
+                        margin-bottom: 14px;
+                }
                     & + .input-group {
                         margin-left: 18px;
+
+                        @media (max-width: 767px) {
+                            margin-left: 0;
+                        }
                     }
                 }
                 .btn {
                     margin-left: 18px;
                     width: 140px;
+                    @media (max-width: 767px) {
+                        width: 100%;
+                        margin-left: 0;
+                    }
                 }
             }
         }
